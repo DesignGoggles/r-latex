@@ -55,4 +55,33 @@ RUN apt-get update \
  	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
  	&& rm -rf /var/lib/apt/lists/*
 
+# Install R Packages
+RUN R -e "install.packages('data.table',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('tidyverse',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('dplyr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('extrafont',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('testthat',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('readr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('ggplot2',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('shape',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('graphics',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('scales',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('rmarkdown',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('readxl',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('stringr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('gridExtra',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('cowplot',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('devtools',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('patchwork',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('RColorBrewer',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('grid',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('showtext',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('ggrepel',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('knitr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('magrittr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('tools',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('officer',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('mschart',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('flextable',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
 CMD ["bash"]
