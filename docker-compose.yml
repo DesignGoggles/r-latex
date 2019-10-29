@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  rar:
+    build:
+      context: ./
+    container_name: rar
